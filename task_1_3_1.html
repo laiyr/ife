@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>双飞翼布局</title>
+	<style>
+		body,li,div{padding:0;margin:0; box-sizing: border-box;}
+		body{font-family: "Arial","Microsoft YaHei",sans-serif;}
+
+		.cleanfix {
+		    clear: both;
+		}
+		.cleanfix:after {
+			content: '.';
+			clear: both;
+			display: block;
+			visibility: hidden;
+			height: 0;
+			zoom: 1;
+		}
+		.content{padding:20px;margin: 20px;background-color: #eee;position: relative;border: 1px solid #999;}
+		
+		.left, .right, .main {
+			float: left;
+		
+		}
+		
+		
+		.main{
+			width:100%;float: left;min-height: 20px;
+		}
+		.wrap{
+			margin-left: 220px;
+			margin-right: 160px;
+			background-color: #fff; 
+			padding: 20px;
+			border: 1px solid #999;
+		}
+		.left{
+			float: left;
+			width: 200px;
+			margin-left:-100%;
+			background-color: #fff;
+			border: 1px solid #999;padding-top:20px;:
+		}
+		.right{
+			float: left;
+			width:120px;
+			background-color: #fff;
+			margin-left:-122px;border: 1px solid #999;text-align: center;
+		}
+		
+		.left img{display: inline-block;float:left;margin: 20px;margin-top: 0px;} .left span{font-size: 15px;}
+		.right img{margin: 0 auto;display: block;margin: 20px;}
+		img{width:80px;height: 80px;cursor: pointer;box-shadow: 1px 1px 2px #dfdfdf; }
+		p:first-letter{font-size: 2em;float:left}
+
+	</style>
+</head>
+<body>
+	<div class="content cleanfix">
+		<div class="main">
+			<div class="wrap">
+				<h3>关于菜鸟前端团队</h3>
+				<p>百度前端技术学院的课程任务是由百度前端工程师专为对前端不同掌握程度的同学设计。我们尽力保证课程内容的质量以及学习难度的合理性，但即使如此，真正决定课程效果的，还是你的每一次思考和实践。</p>
+				<p>课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。那些最终没有被我们采纳的方案，同样也可以帮助我们学到很多知识。所以，我们列出的参考资料未必是实现需求所必须的。有的时候，实现题目的要求很简单，甚至参考资料里就有，但是背后的思考和亲手去实践却是任务最关键的一部分。在学习这些资料时，要多思考，多提问，多质疑。相信通过和小伙伴们的交流，能让你的学习事半功倍。</p>
+				<p>
+					一年之计在于春，经过漫长的冬季，新的一年开始了。众多莘莘学子纷纷又回到校园，投入学习之中。百度前端技术学院也在些时为大家带来了一道前端学习的饕餮盛宴。经过2年多的尝试与摸索，我们确认了实践、交流与分享，对于技术学习而言，是非常有效且高效的手段，因此，本次春季班，我们特别搭建了一个线上平台系统，通过这个系统向学员们发送编码任务，赏们在这个系统上提交作业地址，进行相互的代码评审（Code Review)与评价，同时在平台中积累自己的学习总结笔记并分享给大家。
+				</p>
+			</div>
+		</div>
+		<div class="left">
+			
+			<img src="images/1.jpg" alt="#"><span>菜鸟队</span>
+		</div>
+		<div class="right">
+			<img src="images/1.jpg" alt="#">
+			<img src="images/2.jpg" alt="#">
+			<img src="images/3.jpg" alt="#">
+		</div>
+	</div>
+</body>
+</html>
